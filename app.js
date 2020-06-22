@@ -31,6 +31,7 @@ function view_in_iframe(){
 //calling the functions
 default_text();
 // Every time when key is released this function will be trigerred 
+// It is because of the .onekeyup property..
    document.body.onkeyup = function()
    {
        view_in_iframe();

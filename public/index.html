@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app"/>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--Including all the libs -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS & JS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">    
+    <style>
+      body{
+      background-color: black;
+      }
+      #hide1{
+      display: none;
+    }
+   #root{
+      display: none;
+    }
+.loader {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 75px;
+  height: 100px;
+}
+.loader__bar {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 50%;
+  background: #2cadd4;
+  transform-origin: center bottom;
+  box-shadow: 1px 1px 0 rgba(149,32,54, .2);
+}
+.loader__bar:nth-child(1) {
+  left: 0px;
+  transform: scale(1, 0.2);
+  animation: barUp1 4s infinite;
+}
+.loader__bar:nth-child(2) {
+  left: 15px;
+  transform: scale(1, 0.4);
+  animation: barUp2 4s infinite;
+}
+.loader__bar:nth-child(3) {
+  left: 30px;
+  transform: scale(1, 0.6);
+  animation: barUp3 4s infinite;
+}
+.loader__bar:nth-child(4) {
+  left: 45px;
+  transform: scale(1, 0.8);
+  animation: barUp4 4s infinite;
+}
+.loader__bar:nth-child(5) {
+  left: 60px;
+  transform: scale(1, 1);
+  animation: barUp5 4s infinite;
+}
+.loader__ball {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #2cadd4;
+  border-radius: 50%;
+  animation: ball 4s infinite;
+}
+@keyframes ball {
+  0% {
+      transform: translate(0, 0);
+ }
+  5% {
+      transform: translate(8px, -14px);
+ }
+  10% {
+      transform: translate(15px, -10px);
+ }
+  17% {
+      transform: translate(23px, -24px);
+ }
+  20% {
+      transform: translate(30px, -20px);
+ }
+  27% {
+      transform: translate(38px, -34px);
+ }
+  30% {
+      transform: translate(45px, -30px);
+ }
+  37% {
+      transform: translate(53px, -44px);
+ }
+  40% {
+      transform: translate(60px, -40px);
+ }
+  50% {
+      transform: translate(60px, 0);
+ }
+  57% {
+      transform: translate(53px, -14px);
+ }
+  60% {
+      transform: translate(45px, -10px);
+ }
+  67% {
+      transform: translate(37px, -24px);
+ }
+  70% {
+      transform: translate(30px, -20px);
+ }
+  77% {
+      transform: translate(22px, -34px);
+ }
+  80% {
+      transform: translate(15px, -30px);
+ }
+  87% {
+      transform: translate(7px, -44px);
+ }
+  90% {
+      transform: translate(0, -40px);
+ }
+  100% {
+      transform: translate(0, 0);
+ }
+}
+@keyframes barUp1 {
+  0% {
+      transform: scale(1, 0.2);
+ }
+  40% {
+      transform: scale(1, 0.2);
+ }
+  50% {
+      transform: scale(1, 1);
+ }
+  90% {
+      transform: scale(1, 1);
+ }
+  100% {
+      transform: scale(1, 0.2);
+ }
+}
+@keyframes barUp2 {
+  0% {
+      transform: scale(1, 0.4);
+ }
+  40% {
+      transform: scale(1, 0.4);
+ }
+  50% {
+      transform: scale(1, 0.8);
+ }
+  90% {
+      transform: scale(1, 0.8);
+ }
+  100% {
+      transform: scale(1, 0.4);
+ }
+}
+@keyframes barUp3 {
+  0% {
+      transform: scale(1, 0.6);
+ }
+  100% {
+      transform: scale(1, 0.6);
+ }
+}
+@keyframes barUp4 {
+  0% {
+      transform: scale(1, 0.8);
+ }
+  40% {
+      transform: scale(1, 0.8);
+ }
+  50% {
+      transform: scale(1, 0.4);
+ }
+  90% {
+      transform: scale(1, 0.4);
+ }
+  100% {
+      transform: scale(1, 0.8);
+ }
+}
+@keyframes barUp5 {
+  0% {
+      transform: scale(1, 1);
+ }
+  40% {
+      transform: scale(1, 1);
+ }
+  50% {
+      transform: scale(1, 0.2);
+ }
+  90% {
+      transform: scale(1, 0.2);
+ }
+  100% {
+      transform: scale(1, 1);
+ }
+}  
+
+    </style>
+    
+    <title>CODE FUSION</title>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__ball"></div>
+    </div>
+    <div id = "hide1" class="navbar-fixed">
+      <nav class = "nav-wrapper black">
+          <div class="container">
+              <a href="" class ="sidenav-trigger" data-target="slide-out"><i class="small material-icons">menu</i></a>	   
+              <a href="" class ="brand-logo">Code Fusion</a>
+              <ul class="right hide-on-med-and-down">
+              <li> <a href="/playground">Playground</a></li>
+              <li> <a id ="start-togetherjs" href="#">Collab</a></li>
+              <li> <a href="/">Home</a> </li>
+              <li> <a href="/about">About</a> </li>
+              <li> <a href="/contact">Contact</a></li>
+          </ul>
+          </div>
+      </nav>
+     </div>
+      
+        <div id="root">
+        </div>    
+  
+      <ul class ="sidenav" id="slide-out">
+        <li> <a href="/playground"><i class="material-icons">code</i> Playground</a></li>
+      <li> <a id = "start-togetherjs2" href="#"><i class="material-icons">supervisor_account</i>Collab</a></li>
+        <li> <a href="/home"><i class="material-icons">home</i> Home</a> </li>
+        <li> <a href="/about"><i class="material-icons">assignment_ind</i> About</a> </li>
+        <li> <a href="/contact"><i class="material-icons">contact_mail</i>Contact</a></li>
+      </ul>      
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+      
+      
+      <script>
+        var TogetherJSConfig_something = "foo";
+        // more config...
+        var TogetherJSConfig_toolName = "Collaboration";
+      </script>
+        <script src="https://togetherjs.com/togetherjs-min.js"></script>
+
+      <script type="text/javascript">
+       $(document).ready(function(){
+         $('.sidenav').sidenav();
+         $('.collapsible').collapsible(); 
+         $("#start-togetherjs").click(TogetherJS);
+         $("#start-togetherjs2").click(TogetherJS);
+         var pageURL = $(location).attr("href");
+         //alert(pageURL);
+         $('#hide1').fadeToggle(2000);
+
+         setTimeout(function(){
+         $('.loader').fadeToggle();
+         $('#root').fadeToggle(2000);
+         
+         if(pageURL !== "http://localhost:3000/playground"){
+         $('body').css({
+        "background" : "url('./wave.png')",
+        "overflow" : "hidden"
+         }) ;
+          }
+       },4000);
+            
+       });
+    </script>
+ </body>
+</html>

@@ -1,0 +1,11 @@
+body{
+    background: url('../material/wave.png');
+    overflow: hidden;
+}
+.playground_button{
+    position: fixed;
+    top:50%;
+    width:100%;
+    transform: translateY(-50%);
+    text-align:center;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app"/>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--<style type ="css"src="./preloader.css"></style>-->
+    <!--Including all the libs -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS & JS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">    
+    <title>CODE FUSION</title>
+  </head>
+  <body>
+    <!---<div class="loader">
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__ball"></div>
+    </div>-->
+    <div id = "nav" class="navbar-fixed">
+      <nav class = "nav-wrapper black">
+          <div class="container">
+              <a href="" class ="sidenav-trigger" data-target="slide-out"><i class="small material-icons">menu</i></a>	   
+              <a href="" class ="brand-logo">Code Fusion</a>
+              <ul class="right hide-on-med-and-down">
+              <li> <a href="/playground">Playground</a></li>
+              <li> <a id ="start-togetherjs" href="#">Collab</a></li>
+              <li> <a href="/">Home</a> </li>
+              <li> <a href="/about">About</a> </li>
+              <li> <a href="/contact">Contact</a></li>
+          </ul>
+          </div>
+      </nav>
+     </div>
+      
+        <div id="root">
+        </div>    
+  
+      <ul class ="sidenav" id="slide-out">
+        <li> <a href="/playground"><i class="material-icons">code</i> Playground</a></li>
+      <li> <a id = "start-togetherjs2" href="#"><i class="material-icons">supervisor_account</i>Collab</a></li>
+        <li> <a href="/home"><i class="material-icons">home</i> Home</a> </li>
+        <li> <a href="/about"><i class="material-icons">assignment_ind</i> About</a> </li>
+        <li> <a href="/contact"><i class="material-icons">contact_mail</i>Contact</a></li>
+      </ul>      
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <!---<script type="text/javascript">
+        
+       setTimeout(function(){
+         $('.loader').hide();
+         $('#nav').show();
+         $('#root').show();
+       },3000);
+
+      </script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+      <script>
+        var TogetherJSConfig_something = "foo";
+        // more config...
+        var TogetherJSConfig_toolName = "Collaboration";
+        </script>
+      <script src="https://togetherjs.com/togetherjs-min.js"></script>
+
+      <script type="text/javascript">
+       $(document).ready(function(){
+         $('.sidenav').sidenav();
+      });
+      $(document).ready(function(){
+          $('.collapsible').collapsible();
+       });
+          $(function () {
+           $("#start-togetherjs").click(TogetherJS);
+           });
+           $(function () {
+           $("#start-togetherjs2").click(TogetherJS);
+           });
+     </script>
+        
+ </body>
+</html>

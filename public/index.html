@@ -242,23 +242,23 @@
         <div id="root">
         </div>    
   
-      <ul class ="sidenav" id="slide-out">
-        <li> <a class=" waves-effect waves-teal" href="/playground"><i class="material-icons">code</i> Playground</a></li>
-      <li> <a class="waves-effect waves-teal" id = "start-togetherjs2" href="#"><i class="material-icons">supervisor_account</i>Collab</a></li>
-        <li> <a class="waves-effect waves-teal" href="/home"><i class="material-icons">home</i> Home</a> </li>
-        <li> <a class="waves-effect waves-teal" href="/about"><i class="material-icons">assignment_ind</i> About</a> </li>
-        <li> <a class="waves-effect waves-teal" href="/contact"><i class="material-icons">contact_mail</i>Contact</a></li>
+      <ul class ="sidenav black" id="slide-out">
+        <li> <a class=" waves-effect waves-teal teal-text" href="/playground"><i class="material-icons teal-text">code</i> Playground</a></li>
+      <li> <a class="waves-effect waves-teal teal-text" id = "start-togetherjs2" href="#"><i class="material-icons teal-text">supervisor_account</i>Collab</a></li>
+        <li> <a class="waves-effect waves-teal teal-text" href="/home"><i class="material-icons teal-text">home</i> Home</a> </li>
+        <li> <a class="waves-effect waves-teal teal-text" href="/about"><i class="material-icons teal-text">assignment_ind</i> About</a> </li>
+        <li> <a class="waves-effect waves-teal teal-text" href="/contact"><i class="material-icons teal-text">contact_mail</i>Contact</a></li>
       </ul>      
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    
+      
+      
       <script>
-      var TogetherJSConfig_siteName = "CODE FUSION";
-      var TogetherJSConfig_toolName = "Collaboration";
-      var TogetherJSConfig_autoStart = false;
-      var TogetherJSConfig_disableWebRTC = true;
+        var TogetherJSConfig_something = "foo";
+        // more config...
+        var TogetherJSConfig_toolName = "Collaboration";
       </script>
-      <script src="https://togetherjs.com/togetherjs-min.js"></script>
+        <script src="https://togetherjs.com/togetherjs-min.js"></script>
 
       <script type="text/javascript">
        $(document).ready(function(){
@@ -276,8 +276,8 @@
          
          if(pageURL !== "http://localhost:3000/playground"){
          $('body').css({
-        "background" : "url('./wave.png')",
-        "overflow" : "hidden"
+         "background": "url(./wave.svg)",
+
          }) ;
           }
        },4000);

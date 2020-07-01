@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import '../material/Settings.css'; 
 
 const themes = [
+  "solarized_dark",
 	"monokai",
 	"github",
 	"tomorrow",
@@ -9,7 +10,6 @@ const themes = [
 	"twilight",
 	"xcode",
 	"textmate",
-	"solarized_dark",
 	"solarized_light",
 	"terminal"
 ];
@@ -77,62 +77,77 @@ export class Settings extends Component {
 
 
           <div className="field">
-              <label class="waves-effect waves-light btn">
+            <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={enableBAC}
                   onChange={evt =>setBoolean("enableBAC", evt.target.checked)}
                 />
+                <span class ="lever"></span>
                 Basic Autocomplete
               </label>
+              </div>
           </div>
           <div className="field">
-              <label class="waves-effect waves-light btn">
+          <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={enableLAC}
                   onChange={evt =>setBoolean("enableLAC", evt.target.checked)}
                 />
+                <span class ="lever"></span>
                 Live Autocomplete
               </label>
+              </div>
           </div>
           <div className="field">
-              <label class="waves-effect waves-light btn">
+          <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={showGutter}
                   onChange={evt => setBoolean("showGutter", evt.target.checked)
                   }
                 />
-                Show Gutter
+                <span class ="lever"></span>
+                Gutter
               </label>
+              </div>
           </div>
 
           <div className="field">
-              <label class="waves-effect waves-light btn">
+          <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={activeLine}
                   onChange={evt => setBoolean("activeLine", evt.target.checked)
                   }
                 />
-                Show Active Line
+                <span class ="lever"></span>
+                Active Line
               </label>
+              </div>
           </div>
           <div className="field">
-              <label class="waves-effect waves-light btn">
+          <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={snippets}
                   onChange={evt => setBoolean("snippets", evt.target.checked)
                   }
                 />
-                Show snippets
+                <span class ="lever"></span>
+                Snippets
               </label>
+              </div>
           </div>
           <div className="field">
-
-              <label class="waves-effect waves-light btn">
+          <div class ="switch"> 
+              <label>
                 <input
                   id="indeterminate-checkbox" 
                   type="checkbox"
@@ -140,9 +155,10 @@ export class Settings extends Component {
                   onChange={evt => setBoolean("lineNumbers", evt.target.checked)
                   }
                 />
-                Show Line Number
+                <span class ="lever"></span>
+                Line Number
               </label>
-
+              </div>
           </div>
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../material/output.css'; 
 
 export class Output extends Component {
 	constructor(props) {
@@ -11,9 +11,10 @@ export class Output extends Component {
     }
     render(){
     	return(
-    		<div
+    		<div className="iff"
     			dangerouslySetInnerHTML = {
     				this.getRaw( this.props.content )
+					
     			}
     		> 
     		</div>

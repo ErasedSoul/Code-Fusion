@@ -37,7 +37,7 @@ export class Body extends Component {
 
                     <div className="css">
                         <h3>CSS</h3>
-                        <textarea
+                        <input
                             className="input-text"
                             name="css"
                             onChange={this.handleChange}
@@ -47,7 +47,7 @@ export class Body extends Component {
 
                     <div className="js">
                         <h3>JS</h3>
-                        <textarea
+                        <input
                             className="input-text"
                             name="js"
                             onChange={this.handleChange}

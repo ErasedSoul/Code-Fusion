@@ -16,9 +16,7 @@ const themes = [
 
 
 export class Settings extends Component {
-	constructor(props) {
-		super(props);
-	}
+	//constructor(props) {super(props);}
 
 	render(){
 		const { fontSize, tab, theme, enableLAC, enableBAC, showGutter, activeLine, snippets, lineNumbers,

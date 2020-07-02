@@ -1,6 +1,6 @@
 .iff
 {
-    height: 100%;
+    height: 40vh; 
     width:100%;
-    min-height: 500px;
+    background-color: white;
 }

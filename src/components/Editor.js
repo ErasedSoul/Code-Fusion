@@ -21,7 +21,7 @@ export class Editor extends Component {
             js: '', 
             fontSize: 18,
             tab: 2, 
-            theme: 'github',
+            theme: 'monokai',
             enableBAC: true,
 		    enableLAC: true,
 		    showGutter: true,

@@ -1,4 +1,5 @@
 import React  from 'react';
+import '../material/About.css'; 
 const About = () =>{
 
     return(
@@ -22,7 +23,8 @@ const About = () =>{
               <p>
                   For more insight explore the 
                   <a href = "https://github.com/ani-0206/Code-Fusion" target="_blank">
-                  github repository. </a> 
+                  <i class="fa fa-github"></i>
+                  </a> 
               </p>
 
               <h5>Browser Support</h5>

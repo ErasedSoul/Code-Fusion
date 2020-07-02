@@ -63,7 +63,10 @@ export class Editor extends Component {
 		return (
 	        
 			<div >
-				<div class = 'set'> 
+				<div className = 'set'>
+				<a class="btn black modal-trigger" href="#modal1"><i class="material-icons">settings</i></a>
+                    <div id="modal1" class="modal">
+                    <div class="modal-content"> 
 					<Settings  
 						theme = {theme} 
 						fontSize = {fontSize}
@@ -79,7 +82,8 @@ export class Editor extends Component {
 						setTab = {this.setTab}
 						setBoolean = {this.setBoolean}
 					/>
-				
+				    </div>
+				    </div>
 					<table className = "input">
 					  	<tr className = "heading">
 						    <th> HTML </th>

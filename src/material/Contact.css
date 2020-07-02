@@ -7,7 +7,17 @@
     background-color: white;
 }
 .collapsible li.active i {
-    -ms-transform: rotate(-300deg); /* IE 9 */
-    -webkit-transform: rotate(-300deg); /* Chrome, Safari, Opera */
-    transform: rotate(-300deg);
+    
   }
+.fa-github
+{
+	font-size: 30px;
+	padding: 8px;
+  
+}
+.fa-linkedin
+{
+  font-size: 30px;
+  padding: 8px;	
+  
+}  

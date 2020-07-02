@@ -8,6 +8,7 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--Including all the libs -->
     <!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- Compiled and minified CSS & JS-->
@@ -265,6 +266,11 @@
 
       <script type="text/javascript">
        $(document).ready(function(){
+         
+         $(document).ready(function(){
+           $('.modal').modal();
+            });
+
          $('.sidenav').sidenav();
          $('.collapsible').collapsible(); 
          $("#start-togetherjs").click(TogetherJS);

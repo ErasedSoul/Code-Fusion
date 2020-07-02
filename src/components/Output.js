@@ -15,9 +15,10 @@ export class Output extends Component {
     			dangerouslySetInnerHTML = {
     				this.getRaw( this.props.content )
 					
-    			}
-    		> 
-    		</div>
+				}			
+    		>
+			</div>	 
+    		
     	);
     }
 }

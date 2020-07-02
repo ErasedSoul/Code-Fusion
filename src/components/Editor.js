@@ -142,8 +142,8 @@ export class Editor extends Component {
 				</div>
 
 				<Output content = { 
-	            "<html>" + html + "</html>" + 
-	            "<style>" + css +  "</style>" + 
+	            "<html>"+ html+"</html>"+ 
+	            "<style>"+css+"</style>"+ 
 	            "<script>" + js +  "</script>" 
 	             } />
 

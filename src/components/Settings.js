@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import '../material/Settings.css'; 
 
 const themes = [
+  "solarized_dark",
 	"monokai",
 	"github",
 	"tomorrow",
@@ -8,65 +10,56 @@ const themes = [
 	"twilight",
 	"xcode",
 	"textmate",
-	"solarized_dark",
 	"solarized_light",
 	"terminal"
 ];
 
 
 export class Settings extends Component {
-	constructor(props) {
-				super(props);
-	}
+	//constructor(props) {super(props);}
 
 	render(){
 		const { fontSize, tab, theme, enableLAC, enableBAC, showGutter, activeLine, snippets, lineNumbers,
 		setTheme, setFont, setBoolean, setTab} = this.props; 
 		return(
-		<div>
+		<div className = "settings">
+
+  <form action="#">
           <div className="field">
-            <label>Theme:</label>
-            <p className="control">
-              <span className="select">
-                <select
+              <div  class="input-field col s12" >
+                <select className="browser-default"
                   name="theme"
                   onChange={setTheme}
                   value={theme}
                 >
                   {themes.map(lang => (
                     <option key={lang} value={lang}>
-                      {lang}
+                     Theme {lang}
                     </option>
                   ))}
                 </select>
-              </span>
-            </p>
+              </div>
           </div>
 
           <div className="field">
-            <label>Font Size:</label>
-            <p className="control">
-              <span className="select">
-                <select
+              <div  class="input-field col s12" >
+                <select className="browser-default"
                   name="Font Size"
                   onChange={setFont}
                   value={fontSize}
                 >
                   {[14, 16, 18, 20, 24, 28, 32, 40].map(lang => (
                     <option key={lang} value={lang}>
-                      size  {lang}
+                      Font size  {lang}
                     </option>
                   ))}
                 </select>
-              </span>
-            </p>
+              </div>
           </div>
 
           <div className="field">
-            <label>Font Size:</label>
-            <p className="control">
-              <span className="select">
-                <select
+              <div  class="input-field col s12" >
+                <select className="browser-default"
                   name="Tab Size"
                   onChange={setTab}
                   value={tab}
@@ -77,90 +70,97 @@ export class Settings extends Component {
                     </option>
                   ))}
                 </select>
-              </span>
-            </p>
+              </div>
           </div>
 
 
           <div className="field">
-            <p className="control">
-              <label className="checkbox">
+            <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={enableBAC}
                   onChange={evt =>setBoolean("enableBAC", evt.target.checked)}
                 />
+                <span class ="lever"></span>
                 Basic Autocomplete
               </label>
-            </p>
+              </div>
           </div>
           <div className="field">
-            <p className="control">
-              <label className="checkbox">
+          <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={enableLAC}
                   onChange={evt =>setBoolean("enableLAC", evt.target.checked)}
                 />
+                <span class ="lever"></span>
                 Live Autocomplete
               </label>
-            </p>
+              </div>
           </div>
           <div className="field">
-            <p className="control">
-              <label className="checkbox">
+          <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={showGutter}
                   onChange={evt => setBoolean("showGutter", evt.target.checked)
                   }
                 />
-                Show Gutter
+                <span class ="lever"></span>
+                Gutter
               </label>
-            </p>
+              </div>
           </div>
 
           <div className="field">
-            <p className="control">
-              <label className="checkbox">
+          <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={activeLine}
                   onChange={evt => setBoolean("activeLine", evt.target.checked)
                   }
                 />
-                Show Active Line
+                <span class ="lever"></span>
+                Active Line
               </label>
-            </p>
+              </div>
           </div>
           <div className="field">
-            <p className="control">
-              <label className="checkbox">
+          <div class ="switch">
+              <label>
                 <input
                   type="checkbox"
                   checked={snippets}
                   onChange={evt => setBoolean("snippets", evt.target.checked)
                   }
                 />
-                Show snippets
+                <span class ="lever"></span>
+                Snippets
               </label>
-            </p>
+              </div>
           </div>
           <div className="field">
-            <p className="control">
-              <label className="checkbox">
+          <div class ="switch"> 
+              <label>
                 <input
+                  id="indeterminate-checkbox" 
                   type="checkbox"
                   checked={lineNumbers}
                   onChange={evt => setBoolean("lineNumbers", evt.target.checked)
                   }
                 />
-                Show Line Number
+                <span class ="lever"></span>
+                Line Number
               </label>
-            </p>
+              </div>
           </div>
 
 
+  </form>
 
 
         </div>

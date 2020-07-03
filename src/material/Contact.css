@@ -1,0 +1,26 @@
+
+.collapsible-header{
+    outline: 0px;
+} 
+.collapsible-body
+{
+    background-color: white;
+}
+.collapsible li.active i {
+    
+  }
+.fa-github
+{
+	font-size: 30px;
+	padding: 8px;
+  
+}
+.fa-linkedin
+{
+  font-size: 30px;
+  padding: 8px;	
+  
+}  
+body{
+	background: url(./wave.svg);
+}

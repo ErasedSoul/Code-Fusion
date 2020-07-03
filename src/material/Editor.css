@@ -1,0 +1,11 @@
+.set{
+	width: 100%;
+	background: black;
+	color: white;
+}
+.modal
+{
+	background-color: black; 
+	height: 600px;
+	width: 300px;
+}

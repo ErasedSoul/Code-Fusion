@@ -6,7 +6,7 @@ export class Body extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.state = { 
             html: 'Hello World',
-            css: ' body {background: #100000; color: white} ', 
+            css: '', 
             js: ''
         };
     }
@@ -23,7 +23,7 @@ export class Body extends Component {
     render() {
         const { html, css, js } = this.state; 
         return (
-            <div className="container">
+            <div>
                 <div className="input">
                     <div className="html">
                         <h3>HTML</h3>
@@ -37,7 +37,7 @@ export class Body extends Component {
 
                     <div className="css">
                         <h3>CSS</h3>
-                        <input
+                        <textarea
                             className="input-text"
                             name="css"
                             onChange={this.handleChange}
@@ -47,7 +47,7 @@ export class Body extends Component {
 
                     <div className="js">
                         <h3>JS</h3>
-                        <input
+                        <textarea
                             className="input-text"
                             name="js"
                             onChange={this.handleChange}
@@ -65,8 +65,8 @@ export class Body extends Component {
                     > 
                     </div>
                 </div>   
-
-            </div>
+                </div>
+            
         )
     }
 }

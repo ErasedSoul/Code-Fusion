@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-jsx";
 
@@ -34,9 +33,7 @@ themes.forEach(theme => require(`ace-builds/src-noconflict/theme-${theme}`));
 
 
 export class Input extends Component {
-	constructor(props) {
-        super(props);
-    }
+  	//constructor(props) {super(props);}
 
     render(){
     	const { name, tab, placeholder, value, fontSize, theme, enableLAC, enableBAC, showGutter, activeLine, snippets, lineNumbers,
@@ -64,7 +61,7 @@ export class Input extends Component {
 
                     }}
                     height = "40vh"
-                    width = "33vw"
+                    width = "32vw"
                     //height = {height}
                     //width = {width}
                 />        
